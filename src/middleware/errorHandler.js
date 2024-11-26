@@ -3,9 +3,9 @@ import { InternalServerError } from "../errors/typesError.js"
 
 export const errorHandler = (err, req, res, next) => {
 
-    if(!(err instanceof AppError)) {
+    if (!(err instanceof AppError)) {
         err = new InternalServerError(
-            err.message || 'Error Inesperado', 
+            err.message || 'Error Inesperado',
             'Ocurrio un Error inesperado que requiere analisis'
         )
     }

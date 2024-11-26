@@ -147,7 +147,7 @@ export class Pelicula {
             const validarDirector = ValidacionPelicula.validarDirector(director)
             const validarDuracion = ValidacionPelicula.validarDuracion(duracion)
 
-            const objetoValidado = {nombre: validarNombre, anio: validarAnio, director: validarDirector,duracion: validarDuracion}
+            const objetoValidado = { nombre: validarNombre, anio: validarAnio, director: validarDirector, duracion: validarDuracion }
 
             const actualizarMovie = await updatePelicula(id, objetoValidado, 'peliculas.json');
             return actualizarMovie;

@@ -66,7 +66,7 @@ export const softBorrarPelicula = async (req, res, next) => {
       status: 200,
     });
   } catch (error) {
-   next(error);
+    next(error);
   }
 };
 
@@ -108,10 +108,10 @@ export const obtenerPeliculaBuscandoPorId = async (req, res, next) => {
 };
 
 //falta encontrar por nombre cuando mas de una peli se llaman igual
-export const obtenerPeliculaPorNombre = async (req, res, next) => { 
+export const obtenerPeliculaPorNombre = async (req, res, next) => {
 
   try {
-    
+
     const { nombre } = req.query;
     const pelicula = await Pelicula.encontrarPeliculaPorNombre(nombre);
 
@@ -120,7 +120,7 @@ export const obtenerPeliculaPorNombre = async (req, res, next) => {
       status: 200,
       data: pelicula,
     });
-  
+
   } catch (error) {
     next(error);
   }
